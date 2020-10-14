@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "nxutils"
+version = "0.0.1"
+description = "Helper utilites for mantaining the Apache NuttX project."
+authors = ["Brennan Ashton <<bashton@brennanashton.com>>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyGithub = "^1.53"
+click = "^7.1.2"
+PyInquirer = "^1.0.3"
+colorama = "^0.4.3"
+rich = {git = "https://github.com/willmcgugan/rich"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^20.8b1"
+pytest-cov = "^2.10.1"
+
+[tool.poetry.scripts]
+nxutils = 'nxutils.cli:cli'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
